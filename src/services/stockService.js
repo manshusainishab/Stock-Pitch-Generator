@@ -73,12 +73,6 @@ export const fetchStockHistory = async (symbol) => {
 };
 
 
-const dummyNews = [
-  { headline: 'Dummy News 1', summary: 'This is a placeholder news article for the stock.' },
-  { headline: 'Dummy News 2', summary: 'This is another placeholder news article for the stock.' },
-  { headline: 'Dummy News 3', summary: 'This is a third placeholder news article for the stock.' },
-];
-
 
 export const fetchRelatedNews = async (symbol) => {
   const today = new Date();
@@ -108,7 +102,6 @@ export const fetchRelatedNews = async (symbol) => {
     return response.data.slice(0,5);
   } catch (error) {
     console.error('Error fetching related news:', error);
-    // Return dummy data if the API fails
-    return dummyNews;
+    return []
   }
 };

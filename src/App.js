@@ -23,6 +23,7 @@ function App() {
     setStockHistory(null);
     setStockNews([]);
     setIsNewsFetched(false);
+    setStockPitch('');
 
     const metrics = await fetchStockMetrics(symbol);
     setStockMetrics(metrics);
@@ -45,7 +46,7 @@ function App() {
   };
 
   const generateStockPitch = () => {
-    if (!stockMetrics || !stockHistory || !stockNews.length) return;
+    if (!stockMetrics || !stockHistory || !stockNews) return
 
     const { marketCap, peRatio, eps, dividendYield } = stockMetrics;
     const priceGrowth = stockHistory.prices[stockHistory.prices.length - 1] - stockHistory.prices[0];
@@ -155,8 +156,13 @@ function App() {
               </ul>
             </div>
           ) : (
-            <p>No news available or click the button to fetch news.</p>
+            isNewsFetched ? (
+              <p>No News available about this company recently</p>
+            ) : (
+              <p>Click On Fetch Stock News To Generate Past 2 Days News</p>
+            )
           )}
+
 
           <button className="btn btn-warning mt-4" onClick={generateStockPitch}>
             Generate Stock Pitch

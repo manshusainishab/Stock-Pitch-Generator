@@ -23,7 +23,7 @@ const Login = () => {
       setLoader(true);
       await axios
         .post(
-          "http://localhost:8000/api/v1/user/login",
+          "https://stock-pitch-genrator-backend.onrender.com/api/v1/user/login",
           { email, password },
           {
             withCredentials: true,

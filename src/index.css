@@ -1,13 +1,304 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.containerr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+
+
+  background-color: #f9f9f9;
+}
+
+.login-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-form h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+
+.login-form p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #f76029;
+  outline: none;
+  background-color: #fff;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f76029;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:disabled {
+  background-color: #d85c24;
+  cursor: not-allowed;
+}
+
+.login-form button:hover:not(:disabled) {
+  background-color: #d85c24;
+}
+
+.login-form .registerNow {
+  text-decoration: underline;
+  color: #f76029;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.login-form .registerNow:hover {
+  color: #d85c24;
+}
+
+.login-form div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.login-form div p {
+  margin-bottom: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.login-form div a {
+  color: #f76029;
+  font-size: 14px;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+
+.register-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+
+.register-form h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+
+.register-form p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+
+.register-form input,
+.register-form select {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  border-color: #f85d16;
+  outline: none;
+  background-color: #fff;
+}
+
+
+.register-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f85d16;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.register-form button:hover:not(:disabled) {
+  background-color: #e74a12;
+}
+
+
+.register-form .registerNow {
+  text-decoration: underline;
+  color: #f85d16;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.register-form .registerNow:hover {
+  color: #e74a12;
+}
+
+
+.register-form div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.register-form div p {
+  margin-bottom: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.register-form div a {
+  color: #f85d16;
+  font-size: 14px;
+}
+
+.logoutBtnDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn{
+  font-size: 40px;
+}
+
+
+.react-confirm-alert-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999; 
+}
+
+.react-confirm-alert-body {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.react-confirm-alert-button-group {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.react-confirm-alert-button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.react-confirm-alert-button-group button:hover {
+  opacity: 0.8;
+}
+
+
+.react-confirm-alert-button-group button:first-child {
+  background-color: #4caf50;
+  color: white;
+}
+
+
+.react-confirm-alert-button-group button:last-child {
+  background-color: #f44336;
+  color: white;
+}
+
+
+
+
+
+
+

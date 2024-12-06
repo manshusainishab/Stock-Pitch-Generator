@@ -7,6 +7,7 @@ import axios from "axios";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import './index.css';
 
 function App() {
   const { isAuthenticated, setIsAuthenticated, setUser } = useContext(Context);

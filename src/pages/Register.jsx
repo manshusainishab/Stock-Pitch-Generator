@@ -28,7 +28,7 @@ const Register = () => {
 
     try {
       const res = await axios.post(
-        "https://stock-pitch-genrator-backend.onrender.com/api/v1/user/user/register",
+        "https://stock-pitch-genrator-backend.onrender.com/api/v1/user/register",
         {
           firstName,
           lastName,
